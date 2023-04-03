@@ -12,17 +12,17 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://aklcote:QItFi1hl4BsNgP2k@cluster0.ukzj5wl.mongodb.net/todolistDB")
-mongoose.connect("mongodb://localhost:27017/todolistDB", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://aklcote:seopI0Zf7K6WvU93@cluster0.ukzj5wl.mongodb.net/todolistDB", {useNewUrlParser: true});
+//mongoose.connect("mongodb://localhost:27017/todolistDB", {useNewUrlParser: true});
 
-const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://aklcote:<password>@cluster0.ukzj5wl.mongodb.net/?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
+// const { MongoClient, ServerApiVersion } = require('mongodb');
+// const uri = "mongodb+srv://aklcote:<password>@cluster0.ukzj5wl.mongodb.net/?retryWrites=true&w=majority";
+// const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+// client.connect(err => {
+//   const collection = client.db("test").collection("devices");
+//   // perform actions on the collection object
+//   client.close();
+// });
 
 
 const itemsSchema = {
